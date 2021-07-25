@@ -1,11 +1,11 @@
 public class Lesson19 {
     public static void main(String[] args) {
-        Human human1 = new Human();
+        Human_lesson19 human1 = new Human_lesson19();
         human1.setAge(18);
         human1.setName("Tom");
         human1.getInfo();
 
-        Human human2 = new Human();
+        Human_lesson19 human2 = new Human_lesson19();
         human2.setAge(25);
         human2.setName("Bob");
         human2.getInfo();
@@ -13,7 +13,7 @@ public class Lesson19 {
     }
 }
 
-class Human {
+class Human_lesson19 {
     private String name;
     private int age;
 
