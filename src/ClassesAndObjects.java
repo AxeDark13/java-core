@@ -1,24 +1,39 @@
 public class ClassesAndObjects {
     public static void main(String[] args) {
         Person person1 = new Person();
-        person1.setNameAndAge("Роман", 50);
-
-        String s1 = "Вова";
-        Person person2 = new Person();
-        person2.setNameAndAge(s1, 20);
-
-        person1.speak();
-        person2.speak();
+        person1.setName("");
+        person1.setAge(-1);
+        System.out.println("Выводим значение в main методе: " + person1.getName());
+        System.out.println("Выводим значение в main методе: " + person1.getAge());
     }
 }
 
 class Person {
-    String name;
-    int age;
+    private String name;
+    private int age;
 
-    void setNameAndAge(String user_name, int user_age) {
-        name = user_name;
-        age = user_age;
+    public void setName(String userName) {
+        if(userName.isEmpty()){
+            System.out.println("Вы ввели пустое имя!");
+        }
+        else {
+            name = userName;
+        }
+    }
+    public String getName(){
+        return name;
+    }
+
+    public void setAge(int userAge) {
+        if(userAge < 0) {
+            System.out.println("Возраст должен быть положительным!");
+        }
+        else {
+            age = userAge;
+        }
+    }
+    public int getAge() {
+        return age;
     }
 
     int calculateYearsToRetirement() {
