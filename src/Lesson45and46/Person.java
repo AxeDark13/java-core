@@ -1,4 +1,4 @@
-package Lesson45;
+package Lesson45and46;
 
 import java.io.Serializable;
 
