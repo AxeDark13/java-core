@@ -6,6 +6,5 @@ public class Test {
         Integer x2 = 123; // <=> Integer x2 = new Integer(123)
 
         Integer.parseInt("123");
-        Boolean.TRUE;
     }
 }
