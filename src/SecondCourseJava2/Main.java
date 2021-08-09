@@ -23,7 +23,7 @@ public class Main {
         });
         worker.start();
 
-        for(int i = 0; i < 2; i++) {
+        for(int i = 0; i < 10; i++) {
             queue.put(getTask());
         }
 
@@ -44,7 +44,7 @@ public class Main {
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
-                    e.printStackTrace();
+                    Thread.currentThread().interrupt();
                 }
                 System.out.println("Task finished: " + this);
             }
